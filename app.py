@@ -42,11 +42,13 @@ def index():
     return  render_template("index.html")
 
 @app.route('/account')
+@login_required
 def account():
     user = db.execute("SELECT * FROM users WHERE id = :id", id=session['id'])[0]
     return render_template('account.html', user=user)
 
 @app.route('/changemail', methods=['GET', 'POST'])
+@login_required
 def mailc():
     if request.method == 'POST':
         if not request.form.get('mail'):
@@ -62,6 +64,7 @@ def mailc():
         return render_template('mail.html')
 
 @app.route('/changepass', methods=['GET', 'POST'])
+@login_required
 def passc():
     if request.method == 'POST':
         if not request.form.get('password'):
@@ -76,6 +79,7 @@ def passc():
         return render_template('pass.html')
 
 @app.route('/changename', methods=['GET', 'POST'])
+@login_required
 def namec():
     if request.method == 'POST':
         if not request.form.get('username'):
@@ -110,6 +114,7 @@ def pages(urlheader):
         return render_template('pages.html')
 
 @app.route('/pages', methods=['GET', 'POST'])
+@login_required
 def page():
     sites = db.execute("SELECT * FROM sites WHERE user_id = :id", id=session['id'])
     return render_template('page.html', sites=sites)
@@ -175,6 +180,7 @@ def learnmore():
     return render_template('learn.html')
 
 @app.route('/new', methods=['GET', 'POST'])
+@login_required
 def new():
     if request.method == 'POST':
         if not request.form.get('header') or not request.form.get('desc') or not request.form.get('content'):
