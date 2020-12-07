@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    School Portal - Account
+{% endblock %}
+
+
+{% block main %}
+	<h1 class="homes" style="float: left;"><a href="/pages">Account:</a></h1>
+	<br><br><br><br>
+	<h1>Schoolname </h1>
+	<h3>{{ user['schoolname'] }}</h3>
+	<a href="/changename" class="btn btn-primary">Change your name.</a>
+	<br><br><br>
+	<h1>Mail </h1>
+	<h3>{{ user['mail'] }}</h3>
+	<a href="/changemail" class="btn btn-primary">Change your mail.</a>
+	<br><br><br>
+	<h1>Password </h1>
+	<h3>***</h3>
+	<a href="/changepass" class="btn btn-primary">Change your password.</a>
+{% endblock %}

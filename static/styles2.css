@@ -1,0 +1,179 @@
+.banner
+{
+    width: 100%;
+    max-width: 1500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+body
+{
+    background-image: url('../static/abanner.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+@media screen and (min-width: 1000px){
+    h1
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 30%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        
+    }
+    .h2o
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 40%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .bigtext
+    {
+    font-size: 90px;
+    }   
+    .smalltext
+    {
+        font-size: 30px;
+    }
+    .btgrx
+    {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .h2x
+    {
+        color: white;
+        margin: 10px;
+        float: right;
+    }
+    .smallytext
+    {
+        font-size: 17px;
+    }
+    body a :hover
+    {
+        color: #c0c0c0;
+        margin: 10px;
+        float: right;
+    }
+}
+@media screen and (max-width: 1000px){
+    h1
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 20%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+    }
+    .h2o
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 43%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .bigtext
+    {
+    font-size: 50px;
+    }
+    .smalltext
+    {
+        font-size: 25px;
+    }
+    .btgrx
+    {
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        top: 70%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .h2x
+    {
+        color: white;
+        margin: 10px;
+        float: right;
+        visibility: hidden;
+    }
+    .smallytext
+    {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 320px)
+{
+    h1
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 10%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+    }
+    .h2o
+    {
+        color: white;
+        left: 50%;
+        margin: 0;
+        position: absolute;  
+        top: 30%;             
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .bigtext
+    {
+    font-size: 30px;
+    }
+    .smalltext
+    {
+        font-size: 18px;
+    }
+    .btgrx
+    {
+        margin: 0;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        font-size: 20px;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 20px;
+    }
+    .h2x
+    {
+        color: white;
+        margin: 10px;
+        bottom: 0%;
+        float: right;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,101 @@
+@font-face { font-family: HelveticaNeueBlackCond; src: url('../static/font/HelveticaNeue BlackCond.ttf'); }
+@font-face { font-family: HelveticaNeueMedium; src: url('../static/font/HelveticaNeue Medium.ttf'); }  
+@font-face { font-family: HelveticaNeue; src: url('../static/font/HelveticaNeueLt.ttf'); }
+body h1, h2
+{
+    font-family: HelveticaNeueBlackCond;
+}
+body p, a
+{
+    font-family: HelveticaNeueMedium;
+}
+body
+{
+    font-family: HelveticaNeue;
+    color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 100px;
+    margin-top: 5%;
+}
+body hr
+{
+    border-top: 1px solid black;
+}
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+    text-align: center;
+    font-size: x-large;
+}
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+.form-surround
+{
+    margin-top: 20%;
+}
+header
+{
+    position: absolute;
+}
+.homebtn
+{
+    float: right;
+}
+.learnmore h2
+{
+    font-size: 80px;
+    margin: 20px;
+}
+.learnmore p
+{
+    font-size: 25px;
+}
+.learnmore a
+{
+    margin-top: 50px;
+    font-size: 40px;
+}
+.formnew input, textarea
+{
+    font-size:14pt;
+    position: absolute center;
+    resize: none;
+}
+.formnew h2
+{
+    float: left;
+}
+#preview
+{
+    text-align: center;
+    font-size: 22px;
+}
+.xsadsa
+{
+    text-align: center;
+    float: none;
+}
+.xsadsa p, li
+{
+    font-size: 21px;
+}
+.homes a
+{
+    color: black;
+    text-decoration: none;
+}

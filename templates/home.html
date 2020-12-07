@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    School Portal - Home
+{% endblock %}
+
+
+{% block main %}
+	<div class="homes">
+		<br><br>
+	    <button onclick="location.href='/new';" type="button" class="btn btn-primary homebtn">Create a page.</button>
+	    <br><br><br><br>
+	    <h1 style="float: left;"><a href="/pages">Pages:</a></h1>
+	    <br><br><br><br>
+	    <div class="card-deck">
+	    {% for row in sites %}
+	    	<a href="page/{{ row['header'] }}">
+	    		<div class="card" style="width: 18rem;">
+		 			<div class="card-body">
+					{% for key, value in row.items() %}
+						{% if key == 'header' %}
+			    			<h5 class="card-title">{{ value }}</h5>
+						{% endif %}
+						{% if key == 'desc' %}
+			    			<p class="card-text">{{ value }}</p>
+						{% endif %}
+					{% endfor %}
+			  		</div>
+				</div>
+	    	</a>
+	    {% endfor %}
+	    </div>
+	</div>
+	<br><br><br><br>
+	<h1 class="homes" style="float: left;"><a href="/pages">Account:</a></h1>
+	<br><br><br><br>
+	<h1>Schoolname </h1>
+	<h3>{{ user['schoolname'] }}</h3>
+	<br><br><br>
+	<h1>Mail </h1>
+	<h3>{{ user['mail'] }}</h3>
+{% endblock %}

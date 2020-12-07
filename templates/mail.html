@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    SchoolPortal - Change Mail
+{% endblock %}
+
+{% block main %}
+    <div class="form-surround">
+        <h1>Change your mail:</h1>
+        <form action="/changemail" method="POST">
+            <div class="form-group">
+                <input class="form-control" name="mail" placeholder="E-Mail" type="email">
+            </div>
+            <button style="font-size: x-large;" class="btn btn-primary" type="submit">Change</button>
+        </form>
+    </div>
+{% endblock %}

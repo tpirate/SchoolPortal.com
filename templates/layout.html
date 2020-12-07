@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- 25aae1 -->
+    <div class="container">
+        <nav style='font-size:30px;' class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+            <a style='font-size:30px;' href="{% if session.id %} /home {% else %} / {% endif %}" class="navbar-brand">School Portal</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% if session.id %} 
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="/home" class="nav-item nav-link active">Home</a>
+                        <a href="/pages" class="nav-item nav-link">Pages</a>
+                        <a href="/learnmore" class="nav-item nav-link">Learn More</a>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+                        <a href="/account" class="nav-item nav-link">Your Account</a>
+                        <a href="/logout" class="nav-item nav-link">Logout</a>
+                    </div>
+                </div>
+            {% else %}
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="/login" class="nav-item nav-link">Login</a>
+                        <a href="/register" class="nav-item nav-link">Register</a>
+                    </div>
+                </div>
+            {% endif %}
+        </nav>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <header>
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+                    <div style="text-align:center;" class="alert alert-danger border text-center alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            {% endif %}
+            {% if category == 'sorry' %}
+                    <div style="text-align:center;" class="alert alert-dark border text-center alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            {% endif %}
+            {% if category == 'okay' %}
+                    <div style="text-align:center;" class="alert alert-success border text-center alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+            {% endif %}
+            {% endfor %}
+        </header>
+        {% endif %}
+    {% endwith %}
+    <main class="container p-5">
+        {% block main %}{% endblock %}
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer font-small blue fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 bg-light">© 2020 Copyright:
+            <a href="https://twitter.com/lelpirate" target="blank"> John Galba</a>
+        </div>
+        <!-- Copyright -->
+    
+    </footer>
+    <!-- Footer -->
+</body>
+</html>

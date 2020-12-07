@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    SchoolPortal - Change Name
+{% endblock %}
+
+{% block main %}
+    <div class="form-surround">
+        <h1>Change Name:</h1>
+        <form action="/changename" method="POST">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="School Name" type="text">
+        </div>
+        <button style="font-size: x-large;" class="btn btn-primary" type="submit">Change</button>
+    </div>
+{% endblock %}

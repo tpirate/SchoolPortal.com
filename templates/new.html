@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'layout.html' %}
+
+{% block title %}
+    School Portal - New Page
+{% endblock %}
+
+{% block main %}
+    <div class="formnew">
+        <form action="/new" method="POST">
+            <h1 style="font-size: 70px;">Create New</h1>
+            <br>
+            <h2 class="formnew">Header:</h2> 
+            <input class="formnew" placeholder="Header" name="header" minlength="3" maxlength="30" size="20" type="text"> 
+            <br><br>
+            <h2 class="formnew">Description:</h2> 
+            <textarea class="formnew" placeholder="Description..." name="desc" minlength="5" maxlength="100" rows="2" cols="25"></textarea> <hr>
+            <br> <h2 class="formnew">Content:</h2> <br>
+            <textarea  class="formnew" id="content" placeholder="Content" name="content" minlength="100" maxlength="10000" rows="10" cols="100"></textarea>
+            <br> <h2 class="formnew">Preview:</h2> <br>
+            <br>
+            <hr>
+            <div class="container xsadsa" id="foo"></div><br><hr>
+            <button style="font-size: x-large;" class="btn btn-primary" type="submit">Create Your Page</button>
+        </form>
+        <!-- <div id="foo" class="formnew"></div> -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+    <script>
+        var md = new Remarkable();
+        var myDiv = document.createElement("div");
+        $("#content").keyup(function(){
+            document.getElementById("foo").innerHTML = (md.render($("#content").val()));
+          });
+    </script>
+{% endblock %}
+</body>
+</html>
