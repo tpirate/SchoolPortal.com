@@ -16,7 +16,7 @@ School Portal has creative ideas.
 ![Badge MIT License](https://img.shields.io/github/license/tpirate/schoolportal)
 MIT License
 
-Copyright (c) 2020 SCHOOLPORTAL
+Copyright (c) 2020 Fikret Can Gurbuz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
