@@ -13,7 +13,7 @@ School Portal has creative ideas.
 4. Javascript
 5. Sqlite3
 # License
-![Badge MIT License](https://img.shields.io/github/license/tpirate/schoolportal)
+![Badge MIT License](https://img.shields.io/github/license/tpirate/schoolportal.com)
 MIT License
 
 Copyright (c) 2020 Fikret Can Gurbuz
